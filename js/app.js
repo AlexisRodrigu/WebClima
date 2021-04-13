@@ -114,11 +114,14 @@ function mostrarClima(datos) {
   imagen.style.height = "128px";
   imagen.style.width = "64px";
   //verificamos el grado de temperatura
-  if (grados >= 25) {
+  if (grados > 25) {
     imagen.src = "../resources/termometroHot.png";
-  } else if (grados <= 24 || grados >= 16) {
+  }
+
+  if (grados < 24 || grados > 16) {
     imagen.src = "../resources/termometrotemp.png";
-  } else if (grados <= 15) {
+  }
+  if (grados < 15) {
     imagen.src = "../resources/termometroCold.png";
   }
 
